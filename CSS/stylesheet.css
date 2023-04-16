@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+    margin: 0px;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    width: 500px;
+    height: max-content;
+    display: grid;
+    grid-template-areas: 
+        'imagem tipo'
+        'imagem nome'
+        'imagem descricao'
+        'imagem valores'
+        'imagem botao';
+    grid-template-rows: 10% 30% auto 10%;
+}
+
+.imagem {
+    grid-area: imagem;
+    width: 250px;
+    background-image: url("../images/image-product-desktop.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.tipo {
+    grid-area: tipo;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 48%);
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.nome {
+    grid-area: nome;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 24px;
+    margin: 10px 20px;
+}
+
+.descricao {
+    grid-area: descricao;
+    margin: 0px 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+}
+
+.valores {
+    grid-area: valores;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+#vl1 {
+    color: hsl(158, 36%, 37%);
+    font-size: 35px;
+    font-family: 'Fraunces';
+}
+
+#vl2 {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    justify-content: center;
+    width: 30%;
+}
+
+.botao {
+    grid-area: botao;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    font-family: 'Montserrat';
+    color: white;
+    border-radius: 10px;
+    width: 80%;
+}
+
+button:hover {
+    background-color: hsl(158, 36%, 26%);
+}
+
+@media (max-width: 375px) {
+    
+    .imagem {
+        background-image: url("../images/image-product-mobile.jpg");
+        border-radius: 15px 15px 0px 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card {
+        width: 90vw;
+        height: 90vh;
+        display: grid;
+        grid-template-areas: 
+            'imagem'
+            'tipo'
+            'nome'
+            'descricao'
+            'valores'
+            'botao';
+        grid-template-rows: 40% 5% 15% 15% 10% 15%;
+    }
+
+}
