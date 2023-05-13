@@ -11,6 +11,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
@@ -33,10 +34,12 @@ body {
 .imagem {
     grid-area: imagem;
     width: 250px;
-    background-image: url("../images/image-product-desktop.jpg");
+    background-image: url("../images/perfum.webp");
     background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 15px 0px 0px 15px;
+    background-position: center;
+    background-size: cover;
 }
 
 .tipo {
@@ -70,13 +73,13 @@ body {
     margin: 10px 10px;
 }
 
-#vl1 {
+.valores #vl1 {
     color: hsl(158, 36%, 37%);
     font-size: 35px;
     font-family: 'Fraunces';
 }
 
-#vl2 {
+.valores #vl2 {
     color: hsl(228, 12%, 48%);
     text-decoration: line-through;
     justify-content: center;
@@ -92,7 +95,7 @@ body {
 
 button {
     border: none;
-    background-color: hsl(158, 36%, 37%);
+    background-color: #a16c40;
     font-family: 'Montserrat';
     color: white;
     border-radius: 10px;
@@ -106,7 +109,8 @@ button:hover {
 @media (max-width: 375px) {
     
     .imagem {
-        background-image: url("../images/image-product-mobile.jpg");
+        background-image: url("../images/perfum_mobile.webp");
+        background-size: cover;
         border-radius: 15px 15px 0px 0px;
         width: 100%;
         height: 100%;
